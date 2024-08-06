@@ -43,13 +43,13 @@ const Board = () => {
     return (
         <div>
             {/* <div className="board-container" style={{ height:"100vh",width:"100vw", display:"flex",alignItems:"center",flexDirection:"column"}}> */}
-            <div className="board-container" style={{ height:"100vh",width:"100vw",position: "relative"}}>
+            <div className="board-container" style={{ display:'flex', justifyContent:'center',height:"100vh",width:"100vw",position: "relative"}}>
                 {isWinner ? (<>{isWinner} won the game
                     <button onClick={handleReset}>Play again</button>
                 </>) :
                     (<>
                         <h4>Player {isXTurn ? "X" : "O"} please move</h4>
-                        <div className="board" style={{display:"flex",flexDirection:"column",position: "absolute", transform:"translate(-50%, -50%)",top:"30%",left:"50%"}}>
+                        <div className="board" style={{display:"flex",flexDirection:"column",position: "absolute", transform:"translate(-50%, -50%)",top:"45%",left:"50%"}}>
                             <div className="board-row">
                                 <Square onClick={() => handleClick(0)} value={state[0]} />
                                 <Square onClick={() => handleClick(1)} value={state[1]} />
